@@ -9,6 +9,7 @@ from anki.hooks import wrap
 from anki.exporting import AnkiPackageExporter
 
 from .main import touch_media
+from .lib.com.lovac42.anki.version import ANKI20
 
 try:
     from ccbc.media import ExtMediaManager as MediaManager
@@ -17,7 +18,7 @@ except ImportError:
 
 
 #Export apkgs
-if version.startswith("2.1"):
+if not ANKI20:
     AnkiPackageExporter._exportMedia = wrap(
         AnkiPackageExporter._exportMedia,touch_media,"before"
     )

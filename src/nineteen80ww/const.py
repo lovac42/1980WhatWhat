@@ -6,3 +6,9 @@
 
 DOS_EPOCH_TIME = 315550800
 
+import os
+ADDON_PATH = os.path.dirname(__file__)
+
+ADDON_NAME = "1980WhatWhat"
+
+TARGET_STABLE_VERSION = 21

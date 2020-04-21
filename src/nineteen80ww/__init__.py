@@ -4,6 +4,8 @@
 # Support: https://github.com/lovac42/1980WhatWhat
 
 
+from .lib.com.lovac42.anki.others import safety_first
+
 from .main import *
 from .wrap import *
 
